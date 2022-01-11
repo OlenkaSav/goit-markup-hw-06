@@ -22,6 +22,8 @@
   --preferences-bg: #f5f4fa;
   --team-icon-color: #afb1b8;
   --clients-icon-color: #afb1b8;
+  --footer-input-border: rgba(255, 255, 255, 0.3);
+  --footer-input-bg: rgba(33, 150, 243, 0);
 }
 h1,
 h2,
@@ -440,7 +442,7 @@ header {
   fill: var(--accent-colour);
 }
 
-/* Footer */
+/* -----------------Footer------------------ */
 .footer-section {
   background-color: var(--section-backgroun-colour);
 
@@ -523,7 +525,25 @@ header {
 .join-column {
   margin-left: 70px;
 }
-/* Buttons */
+.email-input {
+  margin-left: 93px;
+}
+.footer-input-field {
+  display: flex;
+}
+.email-input input {
+  display: block;
+  width: 358px;
+  height: 50px;
+  background-color: var(--footer-input-bg);
+  border-color: var(--footer-input-border);
+  border-radius: 4px;
+}
+.email-input input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  padding-left: 16px;
+}
+/*------------------ Buttons------------------- */
 
 .button {
   color: var(--text-white-accent-colour);
@@ -583,8 +603,24 @@ header {
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
 }
-
-/* portfolio */
+.button-footer {
+  width: 200px;
+  height: 50px;
+  background: var(--accent-colour);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  margin-left: 15px;
+  padding: 0;
+}
+.button-form {
+  width: 200px;
+  height: 50px;
+  background: var(--accent-colour);
+  border-radius: 4px;
+  padding: 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+/*----------------Portfolio ----------------*/
 .port-title {
   color: var(--title-text-colour);
   font-weight: 700;
@@ -685,7 +721,7 @@ header {
   clip: rect(0 0 0 0);
 }
 
-/* Modal */
+/* -----------------Modal----------------- */
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
@@ -736,3 +772,24 @@ header {
 .backdrop.is-hidden .modal-button {
   opacity: 0;
 }
+/* ----------------Form---------------- */
+input {
+  background-image: url(ссылка на изображение);
+  background-repeat: no-repeat; /*Убираем повтор изображения*/
+  background-position: 4px; /*Позиционируем*/
+  outline: none; /*убираем стандартную обводку браузера*/
+  -moz-border-radius: 5px; /*закругляем углы для Mozilla*/
+  -webkit-border-radius: 5px; /*закругляем углы для Chrome, Safari*/
+  border-radius: 5px; /*закругляем углы для остальных браузеров*/
+  padding-left: 20px; /*отступ слева от ввода, чтобы текст не был на картинке(выбирать по размеру картинки)*/
+  height: 20px; /*высота строки ввода*/
+  font-size: 13px; /*размер шрифта*/
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+/* .form-label {
+  display: block;
+} */

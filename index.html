@@ -279,7 +279,7 @@
         </div>
     </section>
 
-    <!-- Footer section -->
+    <!------------------- Footer section ------------------>
     <footer class="footer-section" >
        <div class="container footer">
            <div>
@@ -321,6 +321,13 @@
                             </svg></a></li>
                 </ul>
            </div>
+           <form class="email-input">
+            <h3 class="footer-join">Подпишитесь на рассылку</h3>
+            <div class="footer-input-field">
+            <input  type="email" name="email" placeholder="E-mail">
+            <button class="button-footer" type="submit"> Подписаться</button>
+            </form>
+           </div>
        </div>
     </footer>
     
@@ -329,8 +336,29 @@
             <button class="modal-button" data-modal-close><svg class="modal-close" width=18px height=18px>
                                 <use href="./images/icons.svg#close-black"></use>
                             </svg>
-
             </button>
+            <form class="form">
+                <b>Оставьте свои данные, мы вам перезвоним</b>
+                <div class="form-elements">
+                    <div class="form-field">
+                        <label class="form-label" for="username">Имя</label>
+                        <input type="text" name="username" id="username" >
+                    </div>
+                    <div class="form-field">
+                    <label class="form-label" for="phone-nomber">Телефон</label>
+                        <input type="tel" name="phone-nomber" id="phone-nomber">
+                    </div>
+                    <div class="form-field">
+                    <label class="form-label" for="email">Почта</label>
+                        <input type="email" name="email" id="email">
+                    </div>
+                    <div class="form-field">
+                        <label class="form-label" for="comment">Комментарий</label>
+                        <textarea name="comment" id="comment"  rows="10"></textarea>
+                    </div>
+                    <button class="button-form" type="submit"> Отправить</button>
+                </div>
+            </form>
         </div>
     </div>
 
