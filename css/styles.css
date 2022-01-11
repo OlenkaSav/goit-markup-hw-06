@@ -604,6 +604,10 @@ header {
   border-radius: 4px;
 }
 .button-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 200px;
   height: 50px;
   background: var(--accent-colour);
@@ -611,6 +615,20 @@ header {
   border-radius: 4px;
   margin-left: 15px;
   padding: 0;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc (30/16);
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--text-white-accent-colour);
+}
+.subscribe {
+  margin-left: 10px;
+}
+.button-footer:hover,
+.button-footer:focus {
+  background-color: var(--hero-button-hover);
 }
 .button-form {
   width: 200px;
