@@ -228,7 +228,7 @@
         </div>
     </section>
     </main>
-    <!------------------ Regular clients ------------------------->
+    <!-- Regular clients -->
     <section class="section clients ">
         <div class="container clients">
             <h2 class="section-title">Постоянные клиенты</h2>
@@ -279,7 +279,7 @@
         </div>
     </section>
 
-    <!------------------- Footer section ------------------>
+    <!-- Footer section -->
     <footer class="footer-section" >
        <div class="container footer">
            <div>
@@ -321,15 +321,15 @@
                             </svg></a></li>
                 </ul>
            </div>
-           <form class="email-input">
-            <h3 class="footer-join">Подпишитесь на рассылку</h3>
-            <div class="footer-input-field">
-            <input  type="email" name="email" placeholder="E-mail">
-            <button class="button-footer" type="submit"> Подписаться <svg class="subscribe" width=24px height=24px>
-                <use href="./images/icons.svg#icon-send"></use>
-            </svg></button>
+            <form class="email-input">
+                <h3 class="footer-join">Подпишитесь на рассылку</h3>
+                <div class="footer-input-field">
+                <input  type="email" name="email" placeholder="E-mail">
+                <button class="button-footer" type="submit"> Подписаться <svg class="subscribe" width=24px height=24px>
+                    <use href="./images/icons.svg#icon-send"></use>
+                </svg></button>
+                </div>
             </form>
-           </div>
        </div>
     </footer>
     
@@ -355,11 +355,23 @@
                     </div>
                     <div class="form-field">
                     <label class="form-label" for="phone-nomber">Телефон</label>
+                    <div class="form-input">
                         <input type="tel" name="phone-nomber" id="phone-nomber" autocomplete="off">
+                        <svg class="input-pic" width=18px height=18px>
+                            <use href="./images/icons.svg#telephone"></use>
+                        </svg>
+                    </div>
+                    
                     </div>
                     <div class="form-field">
                     <label class="form-label" for="email">Почта</label>
+                    <div class="form-input">
                         <input type="email" name="email" id="email" autocomplete="off">
+                        <svg class="input-pic" width=18px height=18px>
+                            <use href="./images/icons.svg#email-form"></use>
+                        </svg>
+                    </div>
+                    
                     </div>
                     <div class="form-field">
                         <label class="form-label" for="comment">Комментарий</label>
@@ -367,9 +379,13 @@
                     </div>
                 </div>
                  <div class="form-field-checkbox">
-                    <input type="checkbox" name="agree" id="agree" >
-                    <label class="form-label" for="agree">Соглашаюсь с рассылкой и принимаю</label>
-                    <a href="" >Условия договора</a>
+                    
+                    <label class="form-label">
+                        <input class="checkbox" type="checkbox" name="agree">
+                         <span class="custom-checkbox"></span> Соглашаюсь с рассылкой и принимаю &#8201; <a href=""> Условия договора</a>
+                   
+                    </label>
+
                  </div>
                     <button class="button-form" type="submit"> Отправить</button>
                 

@@ -650,6 +650,7 @@ header {
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
 }
 .backdrop {
   position: fixed;
@@ -660,7 +661,8 @@ header {
   background-color: rgba(0, 0, 0, 0.2);
 
   opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal {
   position: absolute;
@@ -688,7 +690,7 @@ header {
   flex-direction: column;
   margin-bottom: 10px;
 }
-.form-field-checkbox {
+.form-label {
   display: flex;
   align-items: center;
 }
@@ -716,6 +718,7 @@ header {
   border-radius: 4px;
   padding-left: 42px;
   outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-elements textarea {
   width: 448px;
@@ -724,9 +727,7 @@ header {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
-}
-.form-field-checkbox {
-  margin-top: 20px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-input {
   position: relative;
@@ -738,17 +739,66 @@ header {
   left: 12px;
   transform: translateY(-50%);
   fill: var(--icon-form-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-input input:hover .input-pic,
-.form-input input:focus .input-pic {
+.form-input input:hover ~ svg,
+.form-input input:focus ~ svg {
   fill: var(--accent-colour);
 }
 
 .form-input input:hover,
 .form-input input:focus {
   border-color: var(--accent-colour);
+}
+.form-field textarea:hover,
+.form-field textarea:focus {
+  border-color: var(--accent-colour);
+}
+input[type='checkbox'] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+  /* appearance: none;
+  position: absolute; */
+}
+.checkbox:checked + .custom-checkbox {
+  border-color: transparent;
+  background-color: var(--accent-colour);
+  background-image: url(../images/icon-check.svg);
+  background-size: contain;
+  background-origin: border-box;
+}
+.form-field-checkbox {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+.custom-checkbox {
+  display: inline-block;
+  text-align: center;
+  margin-right: 7px;
+  width: 16px;
+  height: 15px;
+  border: 2px solid rgba(33, 33, 33, 1);
+  border-radius: 2px;
+}
+.form-field-checkbox a {
+  text-decoration-line: underline;
   color: var(--accent-colour);
 }
+.form-field-checkbox input {
+  margin-right: 7px;
+}
+.form-field-checkbox {
+  margin-top: 20px;
+}
+
 /*------------------ Buttons------------------- */
 
 .button {
@@ -828,6 +878,7 @@ header {
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--text-white-accent-colour);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .subscribe {
   margin-left: 10px;
@@ -853,6 +904,11 @@ header {
   color: var(--text-white-accent-colour);
   display: block;
   margin: 30px auto 0px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button-form:hover,
+.button-form:focus {
+  background-color: var(--hero-button-hover);
 }
 .modal-button-close {
   position: absolute;
@@ -873,6 +929,9 @@ header {
   margin-left: auto;
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 1000ms;
+}
+.modal-close {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-hidden .modal-button-close {
   opacity: 0;
